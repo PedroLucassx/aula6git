@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var inteiros = []
+        var menorValor = Infinity
+         for(let i = 0; i < 5;i++){
+             inteiros[i] = Number(prompt('Digite um inteiro: '))
+             if(menorValor > inteiros[i]){
+                 menorValor = inteiros[i]
+             }
+         }
+        alert(`O menor valor foi: ${menorValor}`)
+     </script>
+</body>
+</html>

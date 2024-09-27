@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var maiorValor = -Infinity
+        var menorValor = Infinity
+        var totalVendas = 0
+        var relatorio = ''
+        var vendas = []
+        var comissaoPercent = []
+        var vendedor = []
+        var valor = []
+        var vendedorMaiorComissao = ''
+        var vendedorMenorComissao = ''
+        for(let i = 0;i < 9; i++){
+         vendedor[i] = prompt("Digite o nome desse vendedor")
+         vendas[i] = Number(prompt('Digite o numero de vendas desse vendedor'))
+         comissaoPercent[i] = Number(prompt('Digite o o valor percentual de cada comissao desse vendedor'))
+         totalVendas += vendas[i]
+         valor[i] = comissaoPercent[i] * vendas[i]
+         if(valor[i] > maiorValor){
+             maiorValor = valor[i]
+             var vendedorMaiorComissao = vendedor[i]
+         }
+         if(valor[i] < menorValor){
+             menorValor = valor[i]
+             var vendedorMenorComissao = vendedor[i]
+         }
+        }
+        for(let i = 0;i < 9;i++){
+         alert(`Nome:${vendedor[i]}, Valor da Comissão: ${comissaoPercent[i]}`)
+        }
+        alert(`O total de vendas de todos os vendedores foi: ${totalVendas}\nO vendedor que vai receber o maior será o: ${vendedorMaiorComissao}\nO vendedor que receberá o menor valor será o: ${vendedorMenorComissao}`)
+     </script> 
+</body>
+</html>

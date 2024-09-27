@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var codigo = []
+        var totalProduto = []
+        var qtdProdutosCliente = ''
+        
+        
+        for(let i = 0; i < 10; i++){
+         codigo[i] = i
+         totalProduto[i] = Number(prompt(`Digite a quantidade desse produto de codigo ${codigo[i]} disponivel no estoque`))
+        }
+        while(true){
+         var codigoCliente = Number(prompt('Digite o código do cliente(para pausar o programa, digite 0)'))
+         if(codigoCliente == 0){
+             break;
+         }
+         var codigoProdutoCliente = Number(prompt('Digite o codigo do produto que o cliente deseja'))
+        
+        if(codigoProdutoCliente >= 0 && codigoProdutoCliente <= 9){
+         qtdProdutosCliente = Number(prompt('Quantas unidades desse produto o cliente deseja?'))
+         let i = codigoProdutoCliente
+         if(qtdProdutosCliente <= totalProduto[i]){
+            alert('Pedido atendido, obrigado e volte sempre') 
+            totalProduto[i] -= qtdProdutosCliente  
+         }
+         else{
+            alert('Em falta no estoque')
+         }
+        }
+        else{
+         alert('Produto inexiste')
+        }
+    }
+    for(let i = 0; i < 10;i++){
+        alert(`Codigo do Produto: ${codigo[i]}, Estoque atualizado desse produto: ${totalProduto[i]}`)
+    }
+     </script>
+</body>
+</html>

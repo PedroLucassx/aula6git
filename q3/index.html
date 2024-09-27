@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var reais = []
+         var soma = 0
+         var media = ''
+         for(let i = 0; i < 4;i++){
+             reais[i] = Number(prompt('Digite um numero real: '+(i+1)+' '))
+             soma += reais[i]
+         }
+         media = soma / reais.length
+         alert(media)
+     </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var inteiros = []
+        var indiceNegativo = ''
+        let flag = false
+        /* essa variavel flag, serve para impedir que a condiçao if seja executada mais de uma vez*/
+        for(let i = 0; i < 8; i++){
+         inteiros[i] = Number(prompt('Digite um numero inteiro'))
+ 
+         if(inteiros[i] < 0 && !flag){
+             indiceNegativo = i
+             flag = true
+         }
+        }
+        alert(`o primeiro indice com um inteiro negativo é: ${indiceNegativo}`)
+     </script>
+</body>
+</html>

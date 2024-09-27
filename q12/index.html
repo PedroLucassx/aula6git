@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var alunos = []
+        var mediaFinal = []
+        var maiorMedia = -Infinity
+        var AlunoMaiorMedia = ''
+        var notaAprovacao = 0
+        for(let i = 0;i < 7;i++){
+        alunos[i] = prompt('Digite o nome do aluno')
+        mediaFinal[i] = Number(prompt('Digite a media final desse aluno'))
+        if(mediaFinal[i] > maiorMedia){
+         maiorMedia = mediaFinal[i]
+         AlunoMaiorMedia = alunos[i]
+        }
+        }
+        alert('O aluno com maior média é:'+AlunoMaiorMedia)
+        for(let i = 0;i < 7;i++){
+         if(mediaFinal[i] < 7){
+             notaAprovacao = 10 - mediaFinal[i]
+             alert(`O aluno ${alunos[i]} precisa tirar ${notaAprovacao} para passar no exame final`)
+         }
+        }
+     </script> 
+</body>
+</html>
